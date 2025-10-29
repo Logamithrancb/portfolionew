@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ram Prakash S Portfolio Design System 
+Modern, interactive, tech-focused design with electric blue accents
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Light Mode - Clean & Modern */
+    --background: 0 0% 98%;
+    --foreground: 220 15% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 12%;
+
+    /* Electric Blue Primary */
+    --primary: 217 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 100% 70%;
+
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 220 15% 12%;
+
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 217 100% 95%;
+    --accent-foreground: 217 100% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 95%;
+    --ring: 217 100% 55%;
+
+    --radius: 0.75rem;
+    
+    /* Custom Portfolio Colors */
+    --electric-blue: 217 100% 55%;
+    --electric-blue-glow: 217 100% 70%;
+    --cyber-blue: 195 100% 50%;
+    --tech-gray: 220 15% 15%;
+    --glass: 0 0% 100% / 0.05;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(var(--cyber-blue)));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--electric-blue-glow)), hsl(var(--primary-glow)));
+    --gradient-text: linear-gradient(135deg, hsl(var(--electric-blue)), hsl(var(--cyber-blue)));
+    
+    /* Shadows & Effects */
+    --shadow-glow: 0 0 30px hsl(var(--electric-blue) / 0.3);
+    --shadow-card: 0 10px 30px hsl(220 15% 0% / 0.1);
+    --shadow-hero: 0 20px 60px hsl(var(--electric-blue) / 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - Tech & Cyberpunk Inspired */
+    --background: 220 25% 6%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 25% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 25% 6%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Glowing Electric Blue */
+    --primary: 217 100% 65%;
+    --primary-foreground: 220 25% 6%;
+    --primary-glow: 217 100% 80%;
+
+    --secondary: 220 25% 12%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 220 25% 10%;
+    --muted-foreground: 220 15% 60%;
+
+    --accent: 220 25% 15%;
+    --accent-foreground: 217 100% 70%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 25% 15%;
+    --input: 220 25% 12%;
+    --ring: 217 100% 65%;
+    
+    /* Enhanced Dark Mode Effects */
+    --glass: 0 0% 100% / 0.02;
+    --gradient-glow: linear-gradient(135deg, hsl(var(--electric-blue-glow)), hsl(var(--cyber-blue)));
+    --shadow-glow: 0 0 40px hsl(var(--electric-blue) / 0.4);
+    --shadow-card: 0 10px 30px hsl(220 25% 0% / 0.3);
+    --shadow-hero: 0 25px 80px hsl(var(--electric-blue) / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* Portfolio-specific component styles */
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-effect {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border) / 0.2);
+  }
+  
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .hero-gradient {
+    background: var(--gradient-primary);
+  }
+  
+  .typewriter::after {
+    content: '|';
+    animation: blink 1s infinite;
+    color: hsl(var(--primary));
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+  
+  .animate-typewriter {
+    overflow: hidden;
+    border-right: 2px solid hsl(var(--primary));
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  /* Custom keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes glow {
+    from { box-shadow: 0 0 20px hsl(var(--primary) / 0.5); }
+    to { box-shadow: 0 0 30px hsl(var(--primary) / 0.8), 0 0 40px hsl(var(--primary) / 0.6); }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: hsl(var(--primary)); }
+  }
+  
+  /* Scroll animations */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition-smooth);
+  }
+  
+  .fade-in-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
