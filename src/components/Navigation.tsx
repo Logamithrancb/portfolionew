@@ -33,7 +33,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="font-bold text-xl gradient-text hover:scale-105 transition-transform">
-            Ram Prakash S
+            Logamithran C B
           </Link>
 
           {/* Desktop Navigation */}
