@@ -62,7 +62,7 @@ export const Home = () => {
                   className="glass-effect border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300 hover:shadow-glow"
                   asChild
                 >
-                  <a href="/resume.pdf" download>
+                  <a href="/logamithrancbresume.pdf" download>
                     <Download className="w-4 h-4 mr-2" />
                     Download Resume
                   </a>

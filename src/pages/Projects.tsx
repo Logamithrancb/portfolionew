@@ -30,7 +30,7 @@ export const Projects = () => {
       image: "https://i.postimg.cc/8kyDLYmQ/Screenshot-2025-10-29-174018.png",
       technologies: ["React.js", "Three.js", "Gasp", "Tailwindcss", "Material-UI"],
       category: "frontend",
-      demoUrl: "https://taskflow-dashboard.vercel.app",
+      demoUrl: "https://retrorides-brown.vercel.app/",
       githubUrl: "https://github.com/Logamithrancb/retrorides.git",
       features: ["grid/gallery view of retro cars", "Individual car detail pages", "Fast client-side navigation", "Easy to extend"],
       status: "completed"
@@ -42,7 +42,7 @@ export const Projects = () => {
       image: "https://i.postimg.cc/qqCTJJhg/Screenshot-2025-10-29-174949.png",
       technologies: ["React.js", "Three.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
       category: "frontend",
-      demoUrl: "https://ram-portfolio-psi.vercel.app/",
+      demoUrl: "https://portfolionew-ochre.vercel.app/",
       githubUrl: "https://github.com/ramprakash/portfolio-v2",
       features: ["3D Animations", "Dark/Light Mode", "Responsive Design", "Contact Form"],
       status: "completed"
@@ -54,7 +54,7 @@ export const Projects = () => {
       image: "https://i.postimg.cc/X7dhVd5w/Whats-App-Image-2025-10-29-at-12-27-17-15a31e96.jpg",
       technologies: ["React.js", "Chart.js", "OpenWeather API", "Geolocation API"],
       category: "ai projects",
-      demoUrl: "https://weather-analytics.vercel.app",
+      demoUrl: "/NotFound",
       githubUrl: "https://github.com/Logamithrancb/fake-news-detection.git",
       features:  ["User-friendly web interface","Real-time news classification","Preprocessed text using NLP","Accurate evaluation metrics"],
       status: "completed"
@@ -66,7 +66,7 @@ export const Projects = () => {
       image: "https://i.postimg.cc/CKzYPshr/Whats-App-Image-2025-10-11-at-11-42-58-d8206543.jpg",
       technologies: ["Streamlit", "Flask", "Python", "YOLOV8", "MYSQL"],
       category: "ai projects",
-      demoUrl: "https://chatapp-realtime.vercel.app",
+      demoUrl: "https://retrorides-brown.vercel.app/",
       githubUrl: "https://github.com/Logamithrancb/Mediment.git",
       features: ["Real-time detection", "detect through image", "accurate result", "analysis and report"],
       status: "in-progress"
@@ -78,7 +78,7 @@ export const Projects = () => {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
       technologies: ["React.js", "Node.js", "Swagger", "Prism.js", "Express.js"],
       category: "fullstack",
-      demoUrl: "https://api-docs-hub.vercel.app",
+      demoUrl: "https://github.com/Logamithrancb/hand-gesture-app-launcher.git",
       githubUrl: "https://github.com/Logamithrancb/hand-gesture-app-launcher.git",
       features: ["Interactive Testing", "Code Generation", "Auto Discovery", "Team Collaboration"],
       status: "planning"
