@@ -4,11 +4,12 @@
 
 /* Logamithran C B Portfolio Design System
    Modern, interactive, tech-focused design with electric blue accents
-   All colors in HSL format, optimized for both desktop and mobile. */
+   All colors MUST be HSL.
+*/
 
 @layer base {
   :root {
-    /* Light Mode */
+    /* Light Mode - Clean & Modern */
     --background: 0 0% 98%;
     --foreground: 220 15% 12%;
 
@@ -62,7 +63,6 @@
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    /* Sidebar */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -74,11 +74,13 @@
   }
 
   .dark {
-    /* Dark Mode */
+    /* Dark Mode - Tech & Cyberpunk Inspired */
     --background: 220 25% 6%;
     --foreground: 0 0% 95%;
+
     --card: 220 25% 8%;
     --card-foreground: 0 0% 95%;
+
     --popover: 220 25% 6%;
     --popover-foreground: 0 0% 95%;
 
@@ -89,17 +91,21 @@
 
     --secondary: 220 25% 12%;
     --secondary-foreground: 0 0% 90%;
+
     --muted: 220 25% 10%;
     --muted-foreground: 220 15% 60%;
+
     --accent: 220 25% 15%;
     --accent-foreground: 217 100% 70%;
+
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 100%;
+
     --border: 220 25% 15%;
     --input: 220 25% 12%;
     --ring: 217 100% 65%;
 
-    /* Enhanced Dark Mode */
+    /* Enhanced Dark Mode Effects */
     --glass: 0 0% 100% / 0.02;
     --gradient-glow: linear-gradient(135deg, hsl(var(--electric-blue-glow)), hsl(var(--cyber-blue)));
     --shadow-glow: 0 0 40px hsl(var(--electric-blue) / 0.4);
@@ -115,7 +121,9 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+}
 
+@layer base {
   * {
     @apply border-border;
   }
@@ -124,37 +132,11 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
     overflow-x: hidden;
-    line-height: 1.6;
-    font-size: 1rem;
-  }
-
-  /* ✅ Mobile typography scaling */
-  @media (max-width: 768px) {
-    body {
-      font-size: 0.95rem;
-      line-height: 1.5;
-      padding: 0 1rem;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-    }
-
-    .hero-gradient {
-      padding: 3rem 1.5rem;
-    }
   }
 }
 
 @layer components {
+  /* Portfolio-specific component styles */
   .gradient-text {
     background: var(--gradient-text);
     -webkit-background-clip: text;
@@ -181,22 +163,10 @@
     animation: blink 1s infinite;
     color: hsl(var(--primary));
   }
-
-  /* ✅ Responsive cards, containers */
-  @media (max-width: 640px) {
-    .card, .section {
-      padding: 1rem;
-      border-radius: 0.5rem;
-    }
-
-    .container {
-      padding: 1rem;
-    }
-  }
 }
 
 @layer utilities {
-  /* Animations */
+  /* Animation utilities */
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -216,35 +186,63 @@
     animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
   }
 
-  /* Keyframes */
+  /* Custom keyframes */
   @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
   }
 
   @keyframes glow {
-    from { box-shadow: 0 0 20px hsl(var(--primary) / 0.5); }
-    to { box-shadow: 0 0 30px hsl(var(--primary) / 0.8), 0 0 40px hsl(var(--primary) / 0.6); }
+    from {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.5);
+    }
+    to {
+      box-shadow: 0 0 30px hsl(var(--primary) / 0.8), 0 0 40px hsl(var(--primary) / 0.6);
+    }
   }
 
   @keyframes slideUp {
-    from { opacity: 0; transform: translateY(50px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
 
   @keyframes blink {
-    from, to { opacity: 1; }
-    50% { opacity: 0; }
+    from,
+    to {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
   }
 
   @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: hsl(var(--primary)); }
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: hsl(var(--primary));
+    }
   }
 
   /* Scroll animations */
